@@ -24,4 +24,9 @@ def menu ():
             exit()
         else:
             print("Please enter a valid choice (1-5).")
+
+def add_task():
+    task = input("Enter a Task :  ")
+    todo_list.append({"Task": task, "Status": "Pending"})
+    print("New task Added Successfully ! ")
             
