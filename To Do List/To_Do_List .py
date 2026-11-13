@@ -28,5 +28,23 @@ def menu ():
 def add_task():
     task = input("Enter a Task :  ")
     todo_list.append({"Task": task, "Status": "Pending"})
-    print("New task Added Successfully ! ")
+    print("New task Added Successfully ! \n")
+
+
+def view_tasks():
+    print("Your To-Do List :  ")
+    if len(todo_list) == 0:
+        print("No Pending Tasks")
+    else:
+        for index, task in enumerate(todo_list,1):
+            print(f"{index}: {task['Task']} - {task['Status']}")
+    print("\n")
+
+def remove_task():
+    if len(todo_list)==0:
+        print("List is empty !")
+    else:
+        search_index = int(input("Enter the Task Number that You Want to Remove :  " )) - 1
+    
+
             
